@@ -195,7 +195,7 @@ void print_count(const ros::TimerEvent &te) {
   l_qsize = qsize; qsize = 0;
   pthread_mutex_unlock(&qsize_mutex);
   
-  printf("%u:%u:%u:%u\n", l_in_counter, l_out_counter, l_drop_counter, l_qsize);
+  ROS_DEBUG("%u:%u:%u:%u\n", l_in_counter, l_out_counter, l_drop_counter, l_qsize);
   fflush(stdout);
 }
 
